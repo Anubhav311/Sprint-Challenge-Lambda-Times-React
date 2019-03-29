@@ -8,8 +8,11 @@ export default class Carousel extends Component {
 
     }
   }
-  componentDidMount(){
 
+  componentDidMount(){
+    this.setState({
+      state: carouselData
+    })
   }
 
   leftClick = () => {
@@ -33,3 +36,5 @@ export default class Carousel extends Component {
     )
   }
 }
+
+export default Carousel;
