@@ -1,6 +1,3 @@
-/* Do not change anything in this file until you are completed with the assignment 
-   and have moved onto the stretch goals. */
-
 export const tabData = ['all', 'javascript', 'technology', 'node', 'React.js', 'bootstrap'];
 
 export const cardData = [
@@ -30,7 +27,7 @@ export const cardData = [
   },
   {
     headline: "History of Javascript Libraries: from jQuery to React",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/puppers.jpg",
     author: "PUPPER S. DOGGO"
   },
@@ -54,7 +51,7 @@ export const cardData = [
   },
   {
     headline: "React.js v16 What's new, and what you should know about.",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/fido.jpg",
     author: "FIDO WALKSALOT"
   },
@@ -84,7 +81,7 @@ export const cardData = [
   },
   {
     headline: "React vs Angular vs Vue vs ??? How the frameworks stack up.",
-    tab: "React.js",
+    tab: "react.js",
     img: "./assets/fido.jpg",
     author: "FIDO WALKSALOT"
   },

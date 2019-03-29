@@ -58,14 +58,12 @@ class Login extends React.Component {
         this.setState({
             username: event.target.value
         })
-        console.log(this.state.username)
     }
 
     enterPassword = (event) => {
         this.setState({
             password: event.target.value
         })
-        console.log(this.state.password)
     }
 
     checkCredentials = (event) => {
@@ -90,7 +88,6 @@ class Login extends React.Component {
                     <InputTag onChange={this.enterPassword} placeholder="1234"/>
                     <ButtonTag onClick={this.checkCredentials}>Submit</ButtonTag>
                 </FormTag>
-                
             </LoginContainerDiv>
         )
     }
