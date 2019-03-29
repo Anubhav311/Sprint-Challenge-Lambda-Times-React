@@ -29,9 +29,24 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes is an inbuilt method in React to check the type of a prop. Since React applications are built by joining different components together, it becomes very important to make sure that right type of props are being passed to the components.
+
 - [ ] Describe a life-cycle event in React?
+
+Since React is a virtual-DOM based UI library, it’s components have a life-cycle. Meaning, the cycle of being created to being reflected on the DOM and being removed from the DOM. When a component is added to the DOM it is called to be mounted and when it is removed from the DOM it is called to be unmounted. React has several methods connected to these life-cycle events to give react extra functionality.
+
 - [ ] Explain the details of a Higher Order Component?
+
+A Higher-Order Component is a functional or classical component that accepts a Component as an argument and returns a Component. It adds a layer of abstraction to the application and makes it easier to solve the problems of reusability of same components at different places.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+Three different ways to style components in React are by using CSS Preprocessors, Reactstrap/bootstrap library and using styled-components library. Following are the benefits for each approach:
+1.	CSS preprocessors- using preprocessors can be beneficial for those developers who are more comfortable with nesting       syntax.
+2.	Styled components- styled components is a library that uses the CSS-JS concept and makes it easier to reuse the CSS       rules for different elements.
+3.	Reactstrap- it is also a library which is based on popular library called bootstrap. The user can import whole components and have them ready with a single line of code. With Reactstrap developers can enjoy the inline styling also.
+
 
 ## Project Setup
 
