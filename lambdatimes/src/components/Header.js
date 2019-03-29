@@ -16,9 +16,7 @@ const HeaderDiv = styled.div`
   padding-bottom: 15px;
 
   @media (min-width: 1280px) {
-    .header {
       width: 1280px;
-    }
   }
 
   h1 {
