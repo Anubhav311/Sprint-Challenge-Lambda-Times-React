@@ -30,7 +30,7 @@ export default class Content extends Component {
     this.setState({
       selected: event.target.innerText.toLowerCase()
     })
-    console.log(this.state.selected)
+    console.log(event.target.innerText)
   };
 
   filterCards = () => {
@@ -45,9 +45,18 @@ export default class Content extends Component {
         - if the selected tab is 'all' it should return all 
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
-    */
-   
-    return this.state.cards;
+  */
+    const tempArray = []
+    if(this.state.selected === 'all') {
+      return this.state.cards;
+  } else {
+      for(let i = 0; i<this.state.cards.length; i++) {
+        if(this.state.selected === this.state.cards[i].tab) {
+          tempArray.push(this.state.cards[i])
+        }
+      }
+      return tempArray;
+    }
   };
 
   render() {

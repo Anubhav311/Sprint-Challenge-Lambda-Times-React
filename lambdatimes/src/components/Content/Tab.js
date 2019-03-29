@@ -14,7 +14,6 @@ const Tab = props => {
     >
       {props.tab.toUpperCase()}
       {/* {console.log(props.tab)} */}
-      {console.log(props.selectedTab)}
     </div>
   );
 };
