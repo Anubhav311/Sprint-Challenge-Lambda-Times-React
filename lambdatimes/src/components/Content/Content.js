@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Tabs from './Tabs';
 import Cards from './Cards';
+import Carousal from '../Carousel/Carousel';
 
 // Importing our tab and card data. No need to change anything here.
 import { tabData, cardData } from '../../data';
@@ -18,10 +19,19 @@ export default class Content extends Component {
 
   componentDidMount() {
     // Once the component has mounted, get the data and reflect that data on the state.
+    this.setState({
+      tabs: tabData,
+      cards: cardData
+    })
   }
 
-  changeSelected = tab => {
+  selectTabHandler = event => {
     // this function should take in the tab and update the state with the new tab.
+    // console.log(event.target.innerText)
+    this.setState({
+      selected: event.target.innerText.toLowerCase()
+    })
+    console.log(event.target.innerText)
   };
 
   filterCards = () => {
@@ -36,8 +46,18 @@ export default class Content extends Component {
         - if the selected tab is 'all' it should return all 
           of the items from cardData. 
         - else, it should only return those cards whose 'tab' matched this.state.selected.
-    */
-    return this.state.cards;
+  */
+    const tempArray = []
+    if(this.state.selected === 'all') {
+      return this.state.cards;
+  } else {
+      for(let i = 0; i<this.state.cards.length; i++) {
+        if(this.state.selected === this.state.cards[i].tab) {
+          tempArray.push(this.state.cards[i])
+        }
+      }
+      return tempArray;
+    }
   };
 
   render() {
@@ -48,8 +68,9 @@ export default class Content extends Component {
           `selectedTab` that includes the currently selected tab
           and `selectTabHandler` that includes the function to change the selected tab
         */}
-        <Tabs tabs={this.state.tabs} />
-        <Cards cards={this.filterCards()} />
+        <Tabs tabs={this.state.tabs} selectTabHandler={this.selectTabHandler} selectedTab={this.state.selected}/>
+        <Carousal/>
+        <Cards cards={this.filterCards()}/>
       </div>
     );
   }
